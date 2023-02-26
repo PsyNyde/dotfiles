@@ -29,7 +29,7 @@ Hyprland dots from my arch machine :)
 
 ### ❖ Details(wip)
 - Made for `1366x768` regulation
-- Emoji is from rkbdi's telegram channel
+- Emoji is from [rkbdi's](https://t.me/rkbdiemoji) telegram channel
 - I made the status bar :3 (yay)
 
 ### ❖ Screenshots:(wip)
