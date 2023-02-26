@@ -28,7 +28,7 @@ Hyprland dots from my arch machine :)
 `readme wip`
 
 ### ❖ Details(wip)
-- Made for `1366x768` regulation
+- Made for `1366x768` resulation.
 - Emoji is from [rkbdi's](https://t.me/rkbdiemoji) telegram channel
 - I made the status bar :3 (yay)
 
