@@ -28,9 +28,9 @@ Hyprland dots from my arch machine :)
 `readme wip`
 
 ### ❖ Details(wip)
-- Suspendisse mollis ut urna nec auctor.
-- Vestibulum a ante in leo efficitur accumsan.
-- Donec molestie id dui non finibus. Donec elementu
+- Made for `1366x768` regulation
+- Emoji is from rkbdi's telegram channel
+- I made the status bar :3 (yay)
 
 ### ❖ Screenshots:(wip)
 
