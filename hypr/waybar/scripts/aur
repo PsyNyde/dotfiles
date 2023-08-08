@@ -1,0 +1,14 @@
+#!/bin/bash
+
+pkexec yay -Sy > /dev/null
+
+# Check for updates in AUR
+updates=$(yay -Qua | awk '{print $1}')
+
+# If no updates are available, display a notification
+if [[ -z "$updates" ]]; then
+    notify-send "AUR Updates" "No updates available in AUR."
+else
+    notify-send "AUR Updates" "$updates"
+fi
+

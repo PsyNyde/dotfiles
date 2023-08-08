@@ -1,0 +1,32 @@
+sort=+time
+layer=overlay
+default-timeout=5000
+max-visible=50
+max-history=50
+on-button-left=invoke-default-action
+
+anchor=top-right
+width=300
+height=1000
+padding=12
+outer-margin=10,10,0
+max-icon-size=128
+format=<span foreground='#be95ff' size='14000' weight='bold'>%s</span>\n%b
+
+# background-color=#00000066
+background-color=#161616
+# border-color=#ffffff
+# border-color=#3ddbd9
+border-color=#262626
+border-radius=5
+border-size=3
+
+font=Maple Mono NF Regular 12
+text-alignment=center
+
+[urgency=high]
+text-color=#ff7eb6
+
+[urgency=critical]
+text-color=#ee5296
+default-timeout=10000

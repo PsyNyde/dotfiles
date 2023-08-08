@@ -1,6 +1,6 @@
 {
     "layer": "top",
-        "height": 30,
+        "height": 32,
         "spacing": 10,
 
         // Module order : Left, Center, Right
@@ -10,7 +10,7 @@
 
         // Modules Configuration
         "custom/home": {
-            "format": "",
+            "format": "",
             "on-click": "exec ~/.config/hypr/rofi/launcher.sh",
             "tooltip": false
         },
@@ -31,15 +31,16 @@
             "format-muted": "",
             "format-icons": {
                 "headphone": "",
-                "hands-free": "",
-                "headset": "",
+                "hands-free": "󰂑",
+                "headset": "󰂑",
                 "phone": "",
                 "portable": "",
                 "car": "",
                 "default": ["", ""]
             },
             "scroll-step": 5,
-            "on-click": "pavucontrol",
+            "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+            "on-click-right": "pavucontrol",
             "ignored-sinks": ["Easy Effects Sink"]
         },
         "network": {
@@ -47,14 +48,34 @@
             "tooltip-format": "{essid}({signalStrength}%) - {frequency}MHz\n{ifname} - {ipaddr}\n{bandwidthUpBytes}  - {bandwidthDownBytes} ",
             "format": "{icon}{essid}",
             "format-wifi": "{bandwidthTotalBytes}⠀ ",
-            "format-ethernet": "⠀{ipaddr}/{cidr}",
+            "format-ethernet": "󰊖⠀{ipaddr}/{cidr}",
             "format-disconnected": "⠀N/A",
-            "on-click": "exec iwgtk"
+            "on-click": "exec nm-connection-editor"
         },
         "clock": {
             // "timezone": "Europe/Rome",
-            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-            "format-alt": "{:%Y-%m-%d}",
+           "tooltip-format": "<tt><small>{calendar}</small></tt>",
+           "calendar": {
+               "mode"          : "month",
+               "mode-mon-col"  : 3,
+               "on-scroll"     : 1,
+               "on-click-right": "mode",
+               "format": {
+                   "months":     "<span color='#f2f4f8'><b>{}</b></span>",
+                   "days":       "<span color='#dde1e6'><b>{}</b></span>",
+                   "weeks":      "<span color='#ffe97b'><b>W{}</b></span>",
+                   "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                   "today":      "<span color='#ee5396'><b><u>{}</u></b></span>"
+               }
+           },
+           "actions":  {
+               "on-click-right": "mode",
+               "on-click-forward": "tz_up",
+               "on-click-backward": "tz_down",
+               "on-scroll-up": "shift_up",
+               "on-scroll-down": "shift_down"
+           },
+           "format-alt": "{:%d/%m/%Y}",
             "format": "{:%I:%M %p}"
         },
         "tray": {
@@ -66,7 +87,7 @@
             "format": "⠀{}",
             "interval": 3600,
             "exec": "yay -Qua | wc -l",
-            "on-click": "yay -Qua | while read OUTPUT; do notify-send \"Updates\" \"$OUTPUT\"; done",
+            "on-click": "$HOME/.config/hypr/waybar/scripts/aur",
         },
         "custom/sep": {
             "tooltip": false,

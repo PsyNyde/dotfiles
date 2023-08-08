@@ -40,8 +40,8 @@ line-caps-lock-color=6a9fb5FF
 line-ver-color=d9d8d8FF
 line-wrong-color=ac4142FF
 
-text-clear-color=ffd20400
-text-ver-color=d9d8d800
+text-clear-color=ffe97b00
+text-ver-color=d9d8d8
 text-wrong-color=ee2e2400
 
 bs-hl-color=ee2e24FF
